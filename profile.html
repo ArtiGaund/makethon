@@ -1,0 +1,124 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<script>
+function change()
+{
+window.location="profile.html";
+}
+function edit()
+{
+  window.location="edit.html";
+}
+</script>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="width:100%;">
+  <header class="mdl-layout__header"style="height:50px;width:100%;">
+    <div class="mdl-layout__header-row"style="width:100%">
+      <!-- Title -->
+      <span class="mdl-layout-title">DOCX</span>
+	  <div class="fp-avatar" style="background-color:#FFFFFF"></div>
+	  <button class="mdl-button mdl-js-button" id="username" style="color:#FFFFFF;margin-left:77%" onclick="change()">Username
+</button>
+
+	  	<button id="demo-menu-lower-right"
+        class="mdl-button mdl-js-button mdl-button--icon" style="margin-left:85%;position:absolute">
+  <i class="material-icons">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-right">
+  <li class="mdl-menu__item">Edit Profile</li>
+  <li class="mdl-menu__item">Another Action</li>
+  <li class="mdl-menu__item">Sign Out</li>
+</ul>
+    </div>
+    <!-- Tabs -->
+     <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="width:100%">
+      <a href="dashboard.html" class="mdl-layout__tab "><i class="material-icons">home</i>Home</a>
+     <!-- <a href="feed.html" class="mdl-layout__tab"><i class="material-icons">trending_up</i>Feed</a>-->
+	  <!-- <a href="profile.html" class="mdl-layout__tab is-active"><i class="material-icons">account_box</i>Profile</a>-->
+    </div>
+	<div class="upload"><button type="button" class="mdl-button mdl-js-button mdl-button--fab show-modal" style="background-color:#F06292;">
+  <i class="material-icons">file_upload</i>
+</button>
+  <dialog class="mdl-dialog" style="width: 500px;">
+    <div class="mdl-dialog__content">
+     
+<form action="" method="post">
+
+<label>Title :</label><br>
+<input name="title" placeholder="Title.." type="text" required><br>
+<label>File :</label><br>
+<input name="file" placeholder="Choose File.." type="file" required><br>
+<label>Detail :</label>
+<textarea name="detail" placeholder="Detail.." required>
+</textarea>
+<input name="dsubmit" type="submit" value="Upload">
+ <input id="can" type="button" class="mdl-button close" value="Cancel">
+</form>
+</div>
+    
+  </dialog>
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showModalButton = document.querySelector('.show-modal');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showModalButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script></div>
+  </header>
+ 
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+  </main>
+</div>
+<div class="show">
+<div class="demo-card-wide mdl-card mdl-shadow--2dp"  style="width:80%; height: 15%; top:30px;">
+ 
+  <img src="profile1.jpg" id="profile" style="width: 15%; height: 100%">
+   <button class="mdl-button mdl-js-button mdl-button--primary " style="margin-left: 80%; background-color:#F06292; width: 10%;top: 75%; position: absolute;" onclick="edit()">
+  Edit&#x20Profile
+</button>
+  <div class="mdl-card__menu">
+    
+  </div>
+</div>
+
+<div>
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp" style="top: 50px;left:100px;">
+ 
+  <div class="mdl-card__title">
+   
+  </div>
+  <div class="mdl-card__supporting-text">
+    <h4>My Uploads</h4>
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Get Started
+    </a>
+  </div>
+
+</div><br><br><br>
+</div>
+</div>
+</body>
+</html>
